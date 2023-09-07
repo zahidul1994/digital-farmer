@@ -1,0 +1,4 @@
+var navbar=document.querySelector('nav')
+window.onscroll=function(){if(window.pageYOffset>80){navbar.classList.add('stickyadd')}else{navbar.classList.remove('stickyadd')}}
+var scrollSpy=new bootstrap.ScrollSpy(document.body,{target:'#main_nav',offset:70})
+var slider=tns({container:'.oliver_client',controlsText:["<i class='mdi mdi-chevron-double-left'></i>","<i class='mdi mdi-chevron-double-right'></i>"],loop:!0,controls:!0,autoplayButtonOutput:!1,controlsPosition:'bottom',autoplay:!0,nav:!1,responsive:{1024:{gutter:20,items:3},768:{gutter:20,items:2}}});$(window).on('scroll',function(){if($(this).scrollTop()>100){$('.back_top').fadeIn()}else{$('.back_top').fadeOut()}});$('.back_top').on('click',function(){$("html, body").animate({scrollTop:0},1000);return!1})
